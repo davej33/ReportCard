@@ -42,7 +42,7 @@ public class ReportCard extends AppCompatActivity{
         termView.setText(term);
 
         TextView majorView = (TextView) findViewById(R.id.major);
-        final String major = "Spring";
+        final String major = "Porpoise Theft Management";
         majorView.setText(major);
     }
 }
