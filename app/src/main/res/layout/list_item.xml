@@ -15,15 +15,17 @@
 
         <TextView
             android:id="@+id/class_text_view"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            />
+            android:layout_weight="1"
+            android:gravity="left"/>
 
         <TextView
             android:id="@+id/grade_text_view"
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="34dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            />
+            android:gravity="center_horizontal" />
     </LinearLayout>
 </LinearLayout>
