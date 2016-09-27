@@ -2,7 +2,8 @@ package com.example.android.reportcard;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ListView;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,17 +18,23 @@ public class ReportCard extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_report);
 
-        ArrayList<Grades> grade = new ArrayList<Grades>();
+        ArrayList<String> grade = new ArrayList<String>();
 
-        grade.add(new Grades("English 101","A"));
-        grade.add(new Grades("Math 202","A"));
-        grade.add(new Grades("History 303","A"));
-        grade.add(new Grades("Science 404","A"));
-        grade.add(new Grades("Art 505","A"));
+        grade.add("English");
+        grade.add("A");
+        grade.add("Math");
+        grade.add("A");
+        grade.add("History");
+        grade.add("A");
+        grade.add("Science");
+        grade.add("A");
+        grade.add("Football");
+        grade.add("F");
 
-        GradesAdapter adapter = new GradesAdapter(this, grade);
-        ListView listView = (ListView) findViewById(R.id.view_report);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, grade);
+        GridView listView = (GridView) findViewById(R.id.view_report);
         listView.setAdapter(adapter);
+
 
         TextView nameView = (TextView) findViewById(R.id.name);
         final String name = "Ray Finkle";
@@ -42,7 +49,7 @@ public class ReportCard extends AppCompatActivity{
         termView.setText(term);
 
         TextView majorView = (TextView) findViewById(R.id.major);
-        final String major = "Spring";
+        final String major = "Porpoise Theft Management";
         majorView.setText(major);
     }
 }
