@@ -13,9 +13,9 @@ import java.util.ArrayList;
  * Created by dnj on 9/27/16.
  */
 
-public class GradesAdapter extends ArrayAdapter<Grades>{
+public class GradesAdapter extends ArrayAdapter<ReportCard>{
 
-    public GradesAdapter(Context context, ArrayList<Grades> grades){
+    public GradesAdapter(Context context, ArrayList<ReportCard> grades){
         super(context,0,grades);
     }
 
@@ -29,7 +29,7 @@ public class GradesAdapter extends ArrayAdapter<Grades>{
         }
 
 
-        Grades currentGrade = getItem(position);
+        ReportCard currentGrade = getItem(position);
 
         TextView classTextView = (TextView) listItemView.findViewById(R.id.class_text_view);
         classTextView.setText(currentGrade.getmClassName());
